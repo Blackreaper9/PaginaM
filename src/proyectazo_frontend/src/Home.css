@@ -18,14 +18,14 @@
 
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link {
-    color: rgb(250, 246, 246); /* Color de texto blanco para contraste */
+    color: rgb(250, 246, 246); 
 }
 
 .btn-register:hover {
-    background-color: rgb(228, 102, 123); /* Fondo rosa al pasar el mouse */
-    color: #3c0521; /* Texto blanco */
-    border: 1px solid rgb(244, 159, 173); /* Borde rosa */
+    background-color: rgb(228, 102, 123); 
+    color: #3c0521; 
+    border: 1px solid rgb(244, 159, 173); 
 }
 .navbar-custom .nav-link:hover {
-    color: #e2117a; /* Cambia el color al hacer hover */
+    color: #e2117a; 
 }

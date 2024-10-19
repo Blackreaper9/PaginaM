@@ -1,7 +1,5 @@
 import React from 'react';
 import { Card, Container, Row, Col, Image } from 'react-bootstrap';
-
-// Importa las imágenes de las recetas
 import comida1 from './assets/comida1.jpg';
 import comida2 from './assets/comida2.jpg';
 import comida3 from './assets/comida3.jpg';

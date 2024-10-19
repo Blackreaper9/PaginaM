@@ -9,10 +9,11 @@ import logo from './assets/ciberbloxlogo.png';
 import ropaEstilo1 from './assets/ropaEstilo1.jpg';
 import ropaEstilo2 from './assets/ropaEstilo2.jpg';
 import ropaEstilo3 from './assets/ropaEstilo3.jpg';
+import { AuthButton} from '@bundly/ic-react';
 
 
 const Home = () => {
-    // Estados para autenticación y formularios
+   
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [isAuthenticated, setIsAuthenticated] = useState(false);  // Estado de autenticación
@@ -21,14 +22,14 @@ const Home = () => {
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
 
-    // Función para manejar el inicio de sesión
+    
     const handleLoginSubmit = (e) => {
         e.preventDefault();
         setIsAuthenticated(true);
         console.log("Usuario:", username, "Contraseña:", password);
     };
 
-    // Función para manejar el registro
+    
     const handleRegisterSubmit = (e) => {
         e.preventDefault();
         console.log("Registrarse - Usuario:", registerUsername, "Gmail:", registerEmail, "Contraseña:", registerPassword);
@@ -38,7 +39,7 @@ const Home = () => {
     return (
         <Router>
             <>
-                {/* Navbar */}
+              
                 <Navbar className="navbar-custom" variant="light">
                     <Container>
                         <img src={logo} alt="ciberbloxlogo.png" style={{ width: '150px', marginRight: '20px' }} />
@@ -52,6 +53,7 @@ const Home = () => {
                                     <Nav.Link as={Link} to="/profesionales">Profesionales</Nav.Link>
                                 </>
                             )}
+                            <center><AuthButton></AuthButton></center>
                         </Nav>
                     </Container>
                 </Navbar>
@@ -69,7 +71,7 @@ const Home = () => {
                                         </Card.Text>
                                     </Card.Body>
 
-                                    {/* Formulario de Inicio de Sesión */}
+                                   
                                     <Card className="mt-3">
                                         <Card.Body>
                                             <Card.Title>Inicia Sesión</Card.Title>
@@ -104,7 +106,7 @@ const Home = () => {
                                     </Card>
                                 </Card>
 
-                                {/* Nueva sección de ropa */}
+                             
                                 <section className="mt-5">
                                     <h2 className="text-center">Lo nuevo en ropa 2024</h2>
                                     <p className="text-center">Explora los estilos más populares y usados por mujeres en este 2024.</p>
@@ -150,14 +152,14 @@ const Home = () => {
                             </>
                         } />
 
-                        {/* Rutas para otras secciones */}
+                     
                         <Route path="/centros-ayuda" element={<CentrosDeAyuda />} />
                         <Route path="/profesionales" element={<Profesionales />} />
                         <Route path="/recetas" element={<Recetas />} />
                     </Routes>
                 </Container>
 
-                {/* Modal de Registro */}
+             
                 <Modal show={showRegisterModal} onHide={() => setShowRegisterModal(false)}>
                     <Modal.Header closeButton>
                         <Modal.Title>Registrarse</Modal.Title>

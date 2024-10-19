@@ -94,8 +94,6 @@ const Profesionales = () => {
                 </Card.Body>
             </Card>
         </Container>
-
-
     );
 };
 
